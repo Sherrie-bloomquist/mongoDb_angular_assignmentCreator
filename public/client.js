@@ -6,8 +6,42 @@ myApp.controller('AssignmentController', ['$scope', '$http', function($scope, $h
   console.log('NG');
 
 $scope.getAssignment = function(){
-  
-}
+  console.log('searching for:', $scope.assignmentNameIn);
+  $http({
+    method: "GET",
+    url: '/assignment',
+  }).then (function(response){
+    console.log('back from get call:', response);
+    $scope.assignmentResults = response.assignment_name;
+
+  }); //end http GET call
+
+}; //end getAssignment
+
+$scope.postAssignment = function(){
+  console.log('in postAssignment');
+  var newAssignment = {
+    assignment: $scope.assignmentNameIn,
+    name: {
+      firstName: $scope.firstNameIn,
+      lastName: $scope.lastNameIn
+    },
+    score: $scope.scoreIn
+  };//end new assignment object
+  console.log('newAssignment', newAssignment);
+  //make http call to database to send user inputs
+  $http({
+    method: 'POST',
+    url: '/assignment',
+    data: newAssignment
+  }).then();
+  $scope.getAssignment();
+
+}; //end postAssignment
+
+
+
+
 
 
 

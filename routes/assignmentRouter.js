@@ -26,8 +26,8 @@ router.post('/', function(req, res){
   var newAssignment = new Assignment({
     assignment_name: sentData.assignment,
     name: {
-      firstName: sendData.firstName,
-      lastName: sendData.lastName
+      firstName: sentData.name.firstName,
+      lastName: sentData.name.lastName
     },
     score: sentData.score,
   });//end newAssignment

@@ -11,7 +11,17 @@
   <body ng-app = "myApp">
     <h1>Assignments</h1>
     <div ng-controller = 'AssignmentController'>
+      <input type="text"  placeholder="assignment name" ng-model="assignmentNameIn">
+      <input type="text"  placeholder="first name" ng-model="firstNameIn">
+      <input type="text"  placeholder="last name" ng-model="lastNameIn">
+      <input type="text"  placeholder="score received" ng-model="scoreIn">
+      <button type="button" ng-click="postAssignment()">Submit</button>
 
+      <div ng-repeat = 'assignment in assignmentResults'>
+      <p>
+        <strong>{{ assignments.assignment_name }}</strong>
+      </p>
+    </div>
     </div>
   </body>
 </html>
