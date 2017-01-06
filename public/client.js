@@ -12,7 +12,7 @@ $scope.getAssignment = function(){
     url: '/assignment',
   }).then (function(response){
     console.log('back from get call:', response);
-    $scope.assignmentResults = response.assignment_name;
+    $scope.assignmentResults = response.data;
 
   }); //end http GET call
 
@@ -39,8 +39,7 @@ $scope.postAssignment = function(){
 
 }; //end postAssignment
 
-
-
+$scope.getAssignment();
 
 
 
