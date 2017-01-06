@@ -13,9 +13,9 @@ requires angular, Node, Express, Mongo, mongoose
 FUNCTIONALITY
 ___________________________  
 
-[] Create text inputs that will create assignments using the "/assignments" POST route    
-[] create button and give functionality to submit new information to the database  
-[] display on the DOM all assignments from the database on page load  
+[X] Create text inputs that will create assignments using the "/assignments" POST route    
+[X] create button and give functionality to submit new information to the database  
+[X] display on the DOM all assignments from the database on page load  
 
 
 STRETCH GOALS
@@ -23,3 +23,4 @@ ____________________________________
 
 [] create a button next to each entry that allows you to delete an entry  
 [] create a button next to each entry that allows you to modify an entry  
+[] add style  
